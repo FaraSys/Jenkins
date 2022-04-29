@@ -15,16 +15,10 @@ pipeline {
             steps {
                 sh 'ssh root@10.1.1.101 \'hostmane\''
             }
-            steps {
-                sh 'ssh root@10.1.1.102 \'hostmane\''
-            }
         }
         stage ("Second") {
             steps {
                 sh 'ssh root@10.1.1.101 \'echo \'10.1.1.102 deb1\'\' >> /etc/hosts'
-            }
-            steps {
-                sh 'ssh root@10.1.1.102 \'echo \'10.1.1.101 ub1\'\' >> /etc/hosts'
             }
         }
     }

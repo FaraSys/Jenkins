@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage ("First") {
             steps {
-                sh 'ssh root@10.1.1.101 \'hostmane\''
+                sh 'ssh root@10.1.1.101 \'hostname\''
             }
         }
         stage ("Second") {
             steps {
-                sh 'ssh root@10.1.1.101 \'echo \'10.1.1.102 deb1\'\' >> /etc/hosts'
+                sh 'ssh root@10.1.1.101 "echo \'10.1.1.102 deb1\' >> /etc/hosts"
             }
         }
     }

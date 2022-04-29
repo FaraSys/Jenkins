@@ -7,7 +7,7 @@ pipeline {
         label 'master'
     }
     options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        buildDiscarder(logRotator(numToKeepstr: '10', artifactNumToKeepstr: '10'))
         timestamps()
     }
     stages {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage ("Second") {
             steps {
-                sh 'ssh root@10.1.1.101 'uptime'
+                sh 'ssh root@10.1.1.101 \'uptime\''
             }
         }
     }

@@ -13,14 +13,14 @@ pipeline {
     stages {
         stage ("First") {
             steps {
-                sh 'ssh root@10.1.1.101 \'hostname\''
-                sh 'ssh root@10.1.1.102 \'hostname\''
+                sh 'ssh root@ub1 \'hostname\''
+                sh 'ssh root@deb1 \'hostname\''
             }
         }
         stage ("Second") {
             steps {
-                sh 'ssh root@10.1.1.101 \'uptime\''
-                sh 'ssh root@10.1.1.102 \'uptime\''
+                sh 'ssh root@ub1 \'uptime\''
+                sh 'ssh root@deb1 \'uptime\''
             }
         }
     }
